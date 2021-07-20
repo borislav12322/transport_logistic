@@ -1,0 +1,116 @@
+.header {
+    background: rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    @media screen and (min-width: 768px){
+        padding: 0;
+    }
+
+    .container {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (min-width: 768px){
+            padding-left: 50px;
+            padding-right: 35px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    &__logo-text{
+        margin-left: 15px;
+        @include font('PTSansBold', #FFFFFF, 15px);
+    }
+
+    &__content {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+        .menu {
+            &__list {
+                display: flex;
+            }
+            &__item{
+                padding: 34px 15px;
+                transition: all .5s ease-in-out;
+                height: 100%;
+                
+                &:hover{
+                    background-color: #004AF2;
+                    transition: all .5s ease-in-out;
+                }
+            }
+            &__link{
+                @include font('Lato', #FFFFFF, 15px);
+            }
+        }
+    }
+    &__button-mobile{
+        background-image: url('../images/header/burger.svg');
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        width: 30px;
+        height: 23px;
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .mobile-menu{
+        height: 100vh;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 1);
+        opacity: 0.85;
+        transform: translateX(-100%);
+        transition: all .5s ease-in;
+
+        &__list{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &__item{
+            margin-top: 9px;
+            padding-right: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            transition: all .5s ease-in;
+
+            &:hover{
+                background-color: #004AF2;
+                transition: all .5s ease-in;
+            }
+        }
+
+        &__link{
+            @include font('Lato', #FFFFFF, 15px);
+            line-height: 45px;
+        }
+    }
+
+    .header__mobile-menu.mobile-menu.active{
+        transform: translateX(0%);
+        transition: all .5s ease-in;
+    }
+}

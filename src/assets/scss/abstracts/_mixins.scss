@@ -1,0 +1,41 @@
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin font ($font-family, $color, $font-size) {
+    font-family: $font-family;
+    color: $color;
+    font-size: $font-size;
+}
+
+// @mixin font($size:false, $lh:false, $weight:false, $text-align:false) {
+//     @if $size {
+//         font-size: $size;
+//     }
+
+//     @if $lh {
+//         line-height: $lh;
+//     }
+
+//     @if $weight {
+//         font-weight: $weight;
+//     }
+
+//     @if $text-align {
+//         text-align: $text-align;
+//     }
+// }
+
+// @mixin font-face($font_name, $file_name, $weight, $style) {
+//     @font-face {
+//         font-family: $font_name;
+//         font-display: swap;
+//         src: url("../assets/fonts/#{$file_name}.woff2") format("woff2"),
+//         url("../assets/fonts/#{$file_name}.woff") format("woff");
+//         font-weight: #{$weight};
+//         font-style: #{$style};
+//     }
+// }
+

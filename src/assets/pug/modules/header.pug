@@ -1,0 +1,25 @@
+- var menuValues = ['Services', 'Clients', 'Benefits', 'Team', 'News', 'Contact Us'];
+- var menuValuesMobile = ['Services', 'Clients', 'Benefits', 'Team', 'News'];
+
+header.header
+    .container
+        .header__inner
+            img.header__logo(src="./assets/images/header/header__logo.svg", alt="logo")
+            span.header__logo-text.
+                CenterLogistic
+        .header__content
+            nav.header__nav.menu
+                ul.menu__list
+                    each value in menuValues
+                        li.menu__item 
+                            a.menu__link #{value}
+        button.header__button-mobile#mobileBtn
+        .header__mobile-menu.mobile-menu
+            .mobile-menu__wrapper
+                nav.mobile-menu__nav
+                    ul.mobile-menu__list
+                        each value in menuValuesMobile
+                            li.mobile-menu__item
+                                a.mobile-menu__link #{value}
+                                
+

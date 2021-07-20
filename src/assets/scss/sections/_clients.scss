@@ -1,0 +1,79 @@
+.atica{
+    width: 78px;
+    height: 78px;
+    margin-right: 61px;
+    margin-bottom: 20px;
+}
+.hex-lab{
+    width: 210px;
+    height: 60px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    
+}
+.amara{
+    width: 228px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.muzica-2{
+    width: 78px;
+    height: 78px;
+    margin-right: 61px;
+    margin-bottom: 52px;
+}
+.solaytic{
+    width: 194px;
+    height: 62px;
+    margin-right: 86px;
+    margin-bottom: 52px;
+
+}
+.hexa{
+    width: 171px;
+    height: 58px;
+    margin-bottom: 52px;
+
+}
+.utosia-2{
+    width: 231px;
+    height: 59px;
+    margin-right: 61px;
+}
+.fox-hub{
+    width: 254px;
+    height: 59px;
+}
+
+.clients{
+    .container{
+        @extend %container;
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(45, auto);
+        gap: 72px;
+
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: 638px 1fr;
+        }
+    }
+
+    &__images{
+        
+    }
+
+    &__imgs-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__contact{
+        grid-area: 2/1/3/2;
+    }
+}

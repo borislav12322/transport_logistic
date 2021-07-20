@@ -1,0 +1,41 @@
+mixin icon(name, svg_name)
+    if(mod)
+        svg(class=`svg-icon ${svg_name}`)
+            use(xlink:href=`./assets/images/clients/${svg_name}.svg#${name}`)
+    else
+        svg(class=`svg-icon ${svg_name}`)
+            use(x="0" y="0" xlink:href=`./assets/images/clients/${svg_name}.svg#${name}`)
+
+section.clients
+    .container
+        .wrapper
+            .clients__images
+                h2.clients__title.
+                    #[span.text--blue Our] Clients
+                .clients__imgs-box
+                    +icon('image0', 'atica')
+                    +icon('image1', 'hex-lab')
+                    +icon('image0', 'amara')
+                    +icon('image0', 'muzica-2')
+                    +icon('image0', 'solaytic')
+                    +icon('image0', 'hexa')
+                    +icon('image0', 'utosia-2')
+                    +icon('image0', 'fox-hub')
+            .clients__content.slide-one
+                .slide-one__top
+                    .slide-one__img-inner
+                        img(src="./assets/images/clients/slider-avatar.png", alt="John Smith")
+                    .slide-one__name
+                        h2.slide-one__title.
+                            John Smith
+                        h3.slide-one__subtitle.
+                            FOX Hub CEO
+                .slide-one__content
+                    p.slide-one__text.
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            .clients__contact
+                button.clients__btn.
+                    Become a client
+                span.clients__inscription.
+                    we love our clients
+

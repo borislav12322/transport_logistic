@@ -1,0 +1,167 @@
+.main {
+
+    input,
+    button {
+        border: none;
+    }
+    height: 100vh;
+    background-image: url('../images/main slider/slider-image-1.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -900px 0;
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    @media screen and (min-width: 480px){
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+    @media screen and (min-width: 768px){
+        height: 100%;
+        background-position: 0 0;
+        padding-top: 348px;
+        padding-bottom: 52px;
+        justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 874px){
+        justify-content: flex-end;
+    }
+    @media screen and (min-width: 1700px){
+        background-position: 0px -100px;
+    }
+
+    .container {
+        @extend %container;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width: 480px){
+            align-items: flex-start;
+        }
+        @media screen and (min-width: 874px){
+            align-items: flex-end;
+        }
+    }
+
+    &__text {
+        @include font('PTSans', #FFFFFF, 15px);
+        line-height: 21px;
+    }
+
+    &__title {
+        @include font('Lato', rgba(255, 255, 255, 0.8), 80px);
+        font-weight: 700;
+        max-width: 376px;
+        text-align: center;
+        @media screen and (min-width: 480px){
+            text-align: left;
+        }
+        @media screen and (min-width: 874px){
+            font-size: 110px;
+            text-align: right;
+        }
+    }
+
+    .form {
+        display: none;
+
+        @media screen and (min-width: 874px) {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: -30px;
+            left: -700px;
+            z-index: 10;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            background: #033FC9;
+            border-radius: 5px 5px 0px 0px;
+            @extend %form__container;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &__title {
+            @include font('Lato', #FFFFFF, 30px);
+            line-height: 36px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        &__text {
+            @include font('PTSans', #FFFFFF, 15px);
+            font-weight: 400;
+            line-height: 19px;
+            max-width: 340px;
+            width: 100%;
+        }
+
+        &__inputs {
+            display: flex;
+            flex-direction: column;
+            background: #004AF2;
+            @extend %form__container;
+            border-radius: 0px 0px 5px 5px;
+            padding-top: 25px;
+            padding-bottom: 30px;
+        }
+
+        &__input {
+            background-color: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            padding-bottom: 11px;
+            padding-left: 47px;
+            @include font('PTSans', #FFFFFF, 15px);
+
+            &:first-child {
+                background-image: url(../images/request_form/name_icon.svg);
+                background-repeat: no-repeat;
+                background-position: 5% 5%;
+            }
+
+            &:nth-child(2) {
+                background-image: url(../images/request_form/phone_icon.png);
+                background-repeat: no-repeat;
+                background-position: 5% 5%;
+            }
+
+            &:nth-child(3) {
+                background-image: url(../images/request_form/email_icon.png);
+                background-repeat: no-repeat;
+                background-position: 5% 20%;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 29px;
+            }
+
+            &::placeholder {
+                color: #FFFFFF;
+                @include font('PTSans', #FFFFFF, 16px);
+                font-weight: 400;
+                line-height: 21px;
+            }
+        }
+
+        &__btn {
+            @include font('PTSans', #FFFFFF, 18px);
+            font-weight: 700;
+            line-height: 23px;
+            background: linear-gradient(90deg, #FF903E 0%, #FF2C2C 100%);
+            min-height: 45px;
+            border-radius: 5px;
+            margin-top: 34px;
+            cursor: pointer;
+        }
+    }
+}

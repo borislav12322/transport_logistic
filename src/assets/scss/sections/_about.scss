@@ -1,0 +1,78 @@
+.about{
+    padding-top: 90px;
+    padding-bottom: 120px;
+    background-color: #FFFFFF;
+    .container{
+        @extend %container;
+        
+    }
+
+    .inner{
+        padding-top: 28px;
+        padding-bottom: 94px;
+        padding-left: 39px;
+        padding-right: 49px;
+        box-shadow: (0px 5px 30px rgba(0, 0, 0, 0.1));
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        @media screen and (min-width: 768px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (min-width: 1150px){
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 188px;
+        @media screen and (min-width: 1150px){
+            align-items: flex-start;
+        }
+    }
+    &__title{
+        @include font('LatoBold', #2C2C2C, 24px);
+        font-weight: 900;
+        line-height: 29px;
+    }
+    &__text{
+        @include font('PTSans', #585858, 15px);
+        font-weight: 400;
+        line-height: 21px;
+        text-align: center;
+        max-width: 240px;
+        width: 100%;
+        @media screen and (min-width: 1150px){
+            text-align: left;
+        }
+    }
+    &__link{
+        @include font('PTSans', #004AF2, 15px);
+        font-weight: 400;
+        line-height: 21px;
+        transition: all .5s ease-in-out;
+        position: relative;
+        &::after{
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            content: '';
+            width: 10px;
+            height: 1px;
+            background-color: #004AF2;
+            transition: all .5s ease-in-out;
+        }
+        &:hover{
+            color: #FF3E2F;
+            transition: all .5s ease-in-out;
+            &::after{
+                width: 73px;
+                background-color: #FF3E2F;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+}
