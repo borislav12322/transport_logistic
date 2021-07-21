@@ -8,10 +8,11 @@ mixin icon(name, svg_name)
 
 section.clients
     .container
+        h2.clients__title.
+            #[span.text--blue Our] Clients
         .wrapper
+            
             .clients__images
-                h2.clients__title.
-                    #[span.text--blue Our] Clients
                 .clients__imgs-box
                     +icon('image0', 'atica')
                     +icon('image1', 'hex-lab')
@@ -24,7 +25,8 @@ section.clients
             .clients__content.slide-one
                 .slide-one__top
                     .slide-one__img-inner
-                        img(src="./assets/images/clients/slider-avatar.png", alt="John Smith")
+                        img.slide-one__img(src="./assets/images/clients/slider-avatar.png", alt="John Smith")
+                        .line
                     .slide-one__name
                         h2.slide-one__title.
                             John Smith
