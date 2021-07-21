@@ -1,5 +1,6 @@
 'use strict'
 import formAnimation from './modules/formAnimation';
+import scrollTriggerSVG from './modules/scaleSVG';
 
 const mobileBtn = document.getElementById('mobileBtn');
 mobileBtn.addEventListener('click', function(e){
@@ -25,5 +26,6 @@ const hideHeader = () =>{
 window.addEventListener('scroll', hideHeader)
 
 formAnimation();
+scrollTriggerSVG();
 
 

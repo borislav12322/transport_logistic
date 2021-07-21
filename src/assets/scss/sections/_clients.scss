@@ -130,6 +130,10 @@
         @media screen and (min-width: 1100px) {
             grid-template-columns: 638px 1fr;
         }
+
+        @media screen and (min-width: 1400px) {
+            grid-template-columns: 638px 1fr 1fr;
+        }
     }
 
     &__images {}
@@ -184,6 +188,7 @@
         &__top {
             display: flex;
             align-items: center;
+            margin-bottom: 35px;
         }
 
         &__img-inner {
@@ -195,6 +200,8 @@
                 border: 2px solid #E62929;
                 background-color: #E62929;
                 transform: rotate(127.74deg);
+                top: 61px;
+                left: -6px;
                 
             }
             
@@ -208,8 +215,8 @@
                 border: 2px solid #E62929;
                 background-color: #E62929;
                 transform: rotate(127.74deg);
-                top: 40px;
-                left: 0;
+                top: 42px;
+                left: -14px;
                 z-index: -1;
             }
 
@@ -220,8 +227,8 @@
                 border: 2px solid #0D53F2;
                 background-color: #0D53F2;
                 transform: rotate(127.74deg);
-                top: 50px;
-                left: 10px;
+                top: 51px;
+                left: -10px;
                 z-index: -1;
             }
 
@@ -236,7 +243,87 @@
             max-width: 100px;
             width: 100%;
         }
+        &__title{
+            @include font('Lato', #2C2C2C, 18px);
+            font-weight: 900;
+            line-height: 22px;
+        }
+        &__subtitle{
+            @include font('Lato', #2C2C2C, 15px);
+            font-weight: 400;
+            line-height: 18px;
+        }
+
+        &__text {
+            @include font('Lato', #2C2C2C, 15px);
+            font-weight: 400;
+            line-height: 27px;
+            text-indent: 20px;
+        }
     }
 
-    &__contact {}
+    &__contact{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @media screen and(min-width: 480px) {
+            flex-direction: row;
+        }
+
+        @media screen and (min-width: 1400px) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 1600px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+    }
+    &__btn{
+        @include font('PTSans', #FFFFFF, 18px);
+        font-weight: 700;
+        line-height: 23px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #FF903E 0%, #FF2C2C 100%);
+        min-height: 45px;
+        padding: 0 45px;
+        margin-bottom: 16px;
+        transition: all .5s ease-in-out;
+        
+        @media screen and(min-width: 480px) {
+            margin-right: 40px;
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 1400px) {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+        @media screen and (min-width: 1600px) {
+            margin-right: 42px;
+            margin-bottom: 0;
+        }
+
+        
+        &:hover{
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+            transition: all .5s ease-in-out;
+        }
+    }
+    &__inscription{
+        @include font('PTSans', #464646, 18px);
+        line-height: 23px;
+        position: relative;
+        &::after{
+            content: url('../images/clients/button_heart.svg');
+            position: absolute;
+            left: 20px;
+            top: -10px;
+        }
+    }
+
 }
