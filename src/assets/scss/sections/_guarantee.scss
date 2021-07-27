@@ -1,0 +1,47 @@
+.guarantee{
+    .container{
+        @extend %container;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (min-width: 1050px) {
+            flex-direction: row;
+        }
+
+        @media screen and (min-width: 1500px) {
+            justify-content: space-evenly;
+        }
+    }
+
+    &__content{
+        display: flex;
+    }
+    &__line{
+        margin-right: 25px;
+    }
+
+    &__inner-row{
+        margin-bottom: 35px;
+    }
+
+    &__title{
+        @include font('LatoBold', #2C2C2C, 21px);
+        font-weight: 900;
+        line-height: 25px;
+        margin-bottom: 12px;
+    }
+
+    &__text{
+        @include font('PTSans', #585858, 15px);
+        font-weight: 400;
+        line-height: 21px;
+        max-width: 315px;
+        width: 100%;
+    }
+    &__img{
+        // display: none;
+    }
+}

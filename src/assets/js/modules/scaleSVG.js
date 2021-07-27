@@ -10,14 +10,14 @@ const svgAnimate = gsap.timeline({
         end: "center top",
         scrub: true,
     }
-})
+});
 
 const scrollTriggerSVG = () =>{
     svgAnimate.from(".svg-icon", {
         duration: 2,
         scale: 0.5, 
         opacity: 0, 
-        delay: 0.5, 
+        delay: 0.1, 
         stagger: 0.2,
         ease: "elastic", 
         force3D: true

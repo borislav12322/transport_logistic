@@ -6,6 +6,7 @@ const uglify = require('gulp-uglify-es').default;
 const pug = require('gulp-pug');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const imageOptiPng = require('imagemin-pngquant');
 const del = require('del');
 const plumber = require('gulp-plumber');
 const sassGlob = require('gulp-sass-glob');
@@ -40,8 +41,8 @@ function images(){
     .pipe(imagemin(
         [
             imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 95, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.mozjpeg({quality: 75, progressive: true}),
+            imageOptiPng({quality: [0.8, 0.9]}),
             imagemin.svgo({
                 plugins: [
                     {removeViewBox: true},
@@ -51,7 +52,7 @@ function images(){
         ]
     ))
     .pipe(dest('dist/assets/images'))
-}
+};
 
 function browsSync(cb){
     browserSync.init({
