@@ -1,0 +1,15 @@
+- var menuValues = ['Terms & Conditions', 'Privacy Policy', 'Our blog'];
+
+footer.footer
+    img.footer__bg-left(src="./assets/images/footer/bg_left.png", alt="bg")
+    img.footer__bg-right(src="./assets/images/footer/bg_rigth.png", alt="bg")
+    .container
+        img.footer__logo(src="./assets/images/footer/logo.png", alt="")
+        adress.footer__adress.
+            New York, Street, ZIP code
+        p.footer__text.
+            Call Us: +9948373123 or E-mail: hello@centerlogistic.com
+        ul.footer__list
+            each value in menuValues
+                li.footer__item
+                    a.footer__link #{value}

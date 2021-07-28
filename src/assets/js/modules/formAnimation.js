@@ -5,5 +5,3 @@ const formAnimation = () =>{
 }
 
 export default formAnimation;
-
-

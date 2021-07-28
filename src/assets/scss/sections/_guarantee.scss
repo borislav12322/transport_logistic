@@ -1,4 +1,5 @@
 .guarantee{
+    padding-bottom: 60px;
     .container{
         @extend %container;
     }
@@ -19,8 +20,24 @@
     &__content{
         display: flex;
     }
-    &__line{
+
+    &__images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-right: 25px;
+    }
+
+    .line-inner{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    &__line{
+        &:not(:last-child){
+        margin-bottom: 15px;
+        }
     }
 
     &__inner-row{
@@ -40,8 +57,5 @@
         line-height: 21px;
         max-width: 315px;
         width: 100%;
-    }
-    &__img{
-        // display: none;
     }
 }

@@ -1,0 +1,58 @@
+.footer{
+    background: #F9F9F9;
+    padding-top: 41px;
+    padding-bottom: 48px;
+    position: relative;
+
+    &__bg-left{
+        position: absolute;
+        left: 0;
+        display: none;
+
+        @media screen and (min-width: 1070px) {
+            display: block;
+        }
+    }
+    &__bg-right{
+        display: none;
+        position: absolute;
+        right: 0;
+        @media screen and (min-width: 1070px) {
+            display: block;
+        }
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo{
+        margin-bottom: 25px;
+    }
+
+    &__adress{
+        @include font('PTSans', #585858, 12px);
+        font-weight: bold;
+        line-height: 18px;
+    }
+
+    &__text{
+        @include font('PTSans', #585858, 12px);
+        font-weight: bold;
+        line-height: 18px;
+        margin-bottom: 25px;
+    }
+
+    &__list{
+        display: flex;
+    }
+    &__item{
+        @include font('PTSans', #004AF2, 12px);
+        line-height: 18px;
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+}

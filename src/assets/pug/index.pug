@@ -1,10 +1,14 @@
 extends modules/base
 block content
-    main.main-section
-        include modules/header.pug
+    include modules/header.pug
+    main.main-section    
         include modules/main.pug
         include modules/about.pug
         include modules/clients.pug
         include modules/guarantee.pug
+        include modules/team.pug
+        include modules/mission.pug
+        include modules/news.pug
+    include modules/footer.pug
     script(type="module" src='./assets/js/main.min.js')
     

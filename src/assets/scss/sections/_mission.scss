@@ -1,0 +1,92 @@
+.mission{
+    padding-top: 137px;
+    margin-bottom: 120px;
+    background: #FFFFFF;
+    position: relative;
+
+    &::before{
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        content: 'OUR MISSION';
+        @include font('Lato', rgba(0, 0, 0, 0.05), 90px);
+        line-height: 108px;
+        font-weight: 900;
+        top: 61px;
+        left: 50%;
+        transform: translateX(-50%)
+
+        
+    }
+
+    @media screen and (min-width: 700px) {
+        &::before{
+            display: block;
+        }
+    }
+
+    .container{
+        @extend %container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__wrapper{
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding-top: 62px;
+        padding-bottom: 66px;
+        margin-bottom: 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.16);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__main-text{
+        @include font('Lato', #2C2C2C, 20px);
+        line-height: 36px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 7px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 30px;
+        }
+    }
+
+    &__sub-text{
+        @include font('Lato', #2C2C2C, 18px);
+        line-height: 25px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: capitalize;
+
+        @media screen and (min-width: 768px) {
+            font-size: 21px;
+        }
+    }
+
+    &__btn{
+        @include font('PTSans', #FFFFFF, 18px);
+        font-weight: 700;
+        line-height: 23px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #FF903E 0%, #FF2C2C 100%);
+        min-height: 45px;
+        padding: 0 45px;
+        transition: all .2s ease-in-out;
+        &:hover{
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+            transition: all .2s ease-in-out;
+        }
+    }
+}

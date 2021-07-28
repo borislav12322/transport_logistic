@@ -1,6 +1,7 @@
 'use strict'
 import formAnimation from './modules/formAnimation';
 import scrollTriggerSVG from './modules/scaleSVG';
+import lineAnimation from './modules/lineAnimation';
 
 const mobileBtn = document.getElementById('mobileBtn');
 mobileBtn.addEventListener('click', function(e){
@@ -27,6 +28,6 @@ window.addEventListener('scroll', hideHeader)
 
 formAnimation();
 scrollTriggerSVG();
-
+lineAnimation();
 
 

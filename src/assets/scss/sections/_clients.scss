@@ -137,7 +137,6 @@
         }
     }
 
-    &__images {}
 
     &__title {
         @include font('LatoBold', #2C2C2C, 45px);
@@ -146,9 +145,7 @@
         margin-bottom: 56px;
     }
 
-    .text--blue {
-        color: #004AF2;
-    }
+    
 
     &__imgs-box {
         position: relative;
